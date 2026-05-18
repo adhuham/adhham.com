@@ -1,5 +1,48 @@
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { siteContent } from '@/lib/site-content'
+
+const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+
+function renderParagraph(paragraph: string | ReactNode) {
+  if (typeof paragraph !== 'string') {
+    return paragraph
+  }
+
+  const nodes: ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = linkRegex.exec(paragraph)) !== null) {
+    const [matchText, text, href] = match
+    const index = match.index
+
+    if (lastIndex < index) {
+      nodes.push(paragraph.slice(lastIndex, index))
+    }
+
+    const isExternal = /^https?:\/\//.test(href) || href.startsWith('//')
+
+    nodes.push(
+      <a
+        key={`${href}-${index}`}
+        href={href}
+        className="text-accent underline-offset-4 hover:underline"
+        {...(isExternal ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+      >
+        {text}
+      </a>
+    )
+
+    lastIndex = index + matchText.length
+  }
+
+  if (lastIndex < paragraph.length) {
+    nodes.push(paragraph.slice(lastIndex))
+  }
+
+  return nodes.length > 0 ? nodes : paragraph
+}
 
 export function Hero() {
   const { hero, profile } = siteContent
@@ -16,13 +59,10 @@ export function Hero() {
             className="rounded-2xl object-cover mb-6"
             style={profile.image.style}
           />
-          <h2 className="mb-4 font-sans text-2xl font-bold leading-tight lg:text-4xl -tracking-[1px]">
-            {hero.title}
-          </h2>
           <div className="space-y-4">
             {hero.paragraphs.map((paragraph, idx) => (
               <p key={idx} className="leading-relaxed text-foreground">
-                {paragraph}
+                {renderParagraph(paragraph)}
               </p>
             ))}
           </div>

@@ -43,11 +43,10 @@ export const siteContent = {
     ],
   },
   hero: {
-    title: 'Shipping ideas into reality.',
     paragraphs: [
       'Hi, I’m Adhham. I’m a software developer who enjoys building impactful digital products. I like turning ideas into real, working applications that are stable, fast, and easy to use.',
       'I’m also interested in building and growing small, purposeful products as an indie entrepreneur. I write about technology, engineering, business, and science, sharing what I learn and exploring ideas that shape how we think and create.',
-      'I currently work at the Government of Maldives. I hold a Bachelor’s degree in Marketing and an MBA focused on Information Technology.'
+      'I hold a Bachelor’s degree in Marketing and an MBA focused on Information Technology. I work at the [Ministry of Finance](https://www.finance.gov.mv/), Government of Maldives.'
     ],
   },
   cta: {
