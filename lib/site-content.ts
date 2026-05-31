@@ -2,7 +2,7 @@ export const siteContent = {
   profile: {
     name: 'Adhham',
     image: {
-      src: '/profile.jpg',
+      src: '/profile.jpg?v=1',
       alt: 'Adhham',
       width: 110,
       height: 120,
