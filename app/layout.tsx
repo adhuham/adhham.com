@@ -46,7 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
+      <body className={`${inter.className} font-sans antialiased text-foreground`}>
+        {children}
+        {/*process.env.NODE_ENV === 'production' && <Analytics />*/}
+
         {process.env.NODE_ENV === 'production' && 
           <Script
             id="clarity"
@@ -62,10 +65,6 @@ export default function RootLayout({
             }}
           />
         }
-      </head>
-      <body className={`${inter.className} font-sans antialiased text-foreground`}>
-        {children}
-        {/*process.env.NODE_ENV === 'production' && <Analytics />*/}
       </body>
     </html>
   )
