@@ -52,7 +52,6 @@ export default function RootLayout({
 
         {process.env.NODE_ENV === 'production' && 
           <Script
-            id="clarity"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
