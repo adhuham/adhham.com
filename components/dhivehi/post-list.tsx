@@ -18,9 +18,6 @@ export function DhivehiPostList({ posts }: PostListProps) {
         <li key={post.slug} className="dhivehi-post-item">
           <Link href={`/dhivehi/${post.slug}`} className="dhivehi-post-link">
             <h2 className="dhivehi-post-title">{post.title}</h2>
-            {post.latinTitle && (
-              <p className="dhivehi-post-latin-title">{getPostLatinTitle(post)}</p>
-            )}
             {post.date && <p className="dhivehi-post-meta">{formatDate(post.date)}</p>}
           </Link>
         </li>

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'MV Aammu FK';
+  src:
+    url('/fonts/dhivehi/mv-aammu-fk.woff2') format('woff2'),
+    url('/fonts/dhivehi/mv-aammu-fk.woff') format('woff'),
+    url('/fonts/dhivehi/mv-aammu-fk.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MV Typewriter';
+  src:
+    url('/fonts/dhivehi/mv-typewriter.woff2') format('woff2'),
+    url('/fonts/dhivehi/mv-typewriter.woff') format('woff'),
+    url('/fonts/dhivehi/mv-typewriter.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Magey Huseynu';
+  src:
+    url('/fonts/dhivehi/magey-huseynu.woff2') format('woff2'),
+    url('/fonts/dhivehi/magey-huseynu.woff') format('woff'),
+    url('/fonts/dhivehi/magey-huseynu.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

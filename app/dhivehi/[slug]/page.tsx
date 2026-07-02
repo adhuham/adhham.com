@@ -48,9 +48,6 @@ export default async function DhivehiPostPage({ params }: DhivehiPostPageProps) 
       </Link>
       <header className="dhivehi-article-header">
         <h1 className="dhivehi-article-title">{post.title}</h1>
-        {post.latinTitle && (
-          <p className="dhivehi-article-latin-title">{getPostLatinTitle(post)}</p>
-        )}
         <ArticleByline
           author={post.author}
           date={post.date}
