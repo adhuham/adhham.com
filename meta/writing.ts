@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
-const header = 'Cogito Ergo Sum / Sine Fine'
+const header = 'Cogito Ergo Scribo / Sine Fine'
 const author = 'Adhham'
 
 export const writingMeta = {
-  name: 'Cogito Ergo Sum',
+  name: 'Cogito Ergo Scribo',
   tagline: 'Sine Fine',
   header,
   author,

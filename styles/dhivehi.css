@@ -113,6 +113,20 @@
   direction: rtl;
 }
 
+.dhivehi-featured-image {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dhivehi-border);
+  background: var(--dhivehi-surface);
+}
+
+.dhivehi-featured-image-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .dhivehi-article-title {
   font-family: var(--dhivehi-thaana);
   font-size: clamp(2rem, 5vw, 2.75rem);

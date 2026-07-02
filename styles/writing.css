@@ -98,6 +98,20 @@
   margin-bottom: 2rem;
 }
 
+.writing-featured-image {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--writing-border);
+  background: var(--writing-surface);
+}
+
+.writing-featured-image-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .writing-article-title {
   font-family: var(--writing-serif);
   font-size: clamp(2rem, 5vw, 2.75rem);

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { PostMeta } from '@/lib/content'
-import { formatArticleMeta } from '@/lib/format-article-meta'
+import { formatDate } from '@/lib/format-date'
 import { getPostLatinTitle } from '@/lib/get-post-latin-title'
 
 interface PostListProps {
@@ -21,7 +21,7 @@ export function DhivehiPostList({ posts }: PostListProps) {
             {post.latinTitle && (
               <p className="dhivehi-post-latin-title">{getPostLatinTitle(post)}</p>
             )}
-            <p className="dhivehi-post-meta">{formatArticleMeta(post.author, post.date)}</p>
+            {post.date && <p className="dhivehi-post-meta">{formatDate(post.date)}</p>}
           </Link>
         </li>
       ))}

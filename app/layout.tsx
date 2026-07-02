@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
+import { siteMeta } from '@/meta/site'
 import './globals.css'
 
 const inter = Inter({
@@ -16,6 +17,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMeta.url),
   title: 'Adhham / Personal homepage',
   description: 'Building software and exploring engineering through projects, experiments, and writing.',
   /*

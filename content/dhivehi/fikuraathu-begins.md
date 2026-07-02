@@ -4,6 +4,7 @@ latinTitle: Where Fikuraathu Begins
 slug: fikuraathu-begins
 author: Adhham
 date: 2025-10-20
+featuredImage: /profile.jpg
 tags:
   - ފިކުރާތު
   - ފިލްސޮފީ

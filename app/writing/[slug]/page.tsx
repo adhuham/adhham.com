@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation'
 import { getAllSlugs, getPost } from '@/lib/content'
 import { formatArticleMeta } from '@/lib/format-article-meta'
 import { getPostLatinTitle } from '@/lib/get-post-latin-title'
+import { buildPostMetadata } from '@/lib/post-metadata'
 import { ArticleAuthor } from '@/components/article-author'
 import { MarkdownContent } from '@/components/markdown-content'
+import { PostFeaturedImage } from '@/components/post-featured-image'
 import { writingMeta } from '@/meta/writing'
 
 interface WritingPostPageProps {
@@ -24,21 +26,7 @@ export async function generateMetadata({ params }: WritingPostPageProps): Promis
     return { title: 'Not found' }
   }
 
-  const latinTitle = getPostLatinTitle(post)
-
-  return {
-    title: `${latinTitle} — ${writingMeta.header}`,
-    description: post.tags?.join(', '),
-    openGraph: {
-      title: `${latinTitle} — ${writingMeta.header}`,
-      description: post.tags?.join(', '),
-    },
-    twitter: {
-      card: 'summary',
-      title: `${latinTitle} — ${writingMeta.header}`,
-      description: post.tags?.join(', '),
-    },
-  }
+  return buildPostMetadata({ post, sectionTitle: writingMeta.header })
 }
 
 export default async function WritingPostPage({ params }: WritingPostPageProps) {
@@ -60,6 +48,13 @@ export default async function WritingPostPage({ params }: WritingPostPageProps) 
           {formatArticleMeta(post.author, post.date)}
         </p>
       </header>
+      {post.featuredImage && (
+        <PostFeaturedImage
+          src={post.featuredImage}
+          alt={getPostLatinTitle(post)}
+          variant="writing"
+        />
+      )}
       <MarkdownContent content={post.content} className="writing-prose" />
       <ArticleAuthor author={post.author} variant="writing" />
     </article>

@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation'
 import { getAllSlugs, getPost } from '@/lib/content'
 import { formatArticleMeta } from '@/lib/format-article-meta'
 import { getPostLatinTitle } from '@/lib/get-post-latin-title'
+import { buildPostMetadata } from '@/lib/post-metadata'
 import { ArticleAuthor } from '@/components/article-author'
 import { MarkdownContent } from '@/components/markdown-content'
+import { PostFeaturedImage } from '@/components/post-featured-image'
 import { dhivehiMeta } from '@/meta/dhivehi'
 
 interface DhivehiPostPageProps {
@@ -24,21 +26,7 @@ export async function generateMetadata({ params }: DhivehiPostPageProps): Promis
     return { title: 'Not found' }
   }
 
-  const latinTitle = getPostLatinTitle(post)
-
-  return {
-    title: `${latinTitle} — ${dhivehiMeta.latinTitle}`,
-    description: post.tags?.join(', '),
-    openGraph: {
-      title: `${latinTitle} — ${dhivehiMeta.latinTitle}`,
-      description: post.tags?.join(', '),
-    },
-    twitter: {
-      card: 'summary',
-      title: `${latinTitle} — ${dhivehiMeta.latinTitle}`,
-      description: post.tags?.join(', '),
-    },
-  }
+  return buildPostMetadata({ post, sectionTitle: dhivehiMeta.latinTitle })
 }
 
 export default async function DhivehiPostPage({ params }: DhivehiPostPageProps) {
@@ -63,6 +51,13 @@ export default async function DhivehiPostPage({ params }: DhivehiPostPageProps) 
           {formatArticleMeta(post.author, post.date)}
         </p>
       </header>
+      {post.featuredImage && (
+        <PostFeaturedImage
+          src={post.featuredImage}
+          alt={getPostLatinTitle(post)}
+          variant="dhivehi"
+        />
+      )}
       <MarkdownContent content={post.content} className="dhivehi-prose" />
       <ArticleAuthor author={post.author} variant="dhivehi" />
     </article>

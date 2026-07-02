@@ -3,6 +3,7 @@ title: Systems Thinking as a Practice
 slug: systems-thinking
 author: Adhham
 date: 2025-11-12
+featuredImage: /profile.jpg
 tags:
   - systems
   - philosophy
