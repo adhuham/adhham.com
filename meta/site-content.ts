@@ -81,7 +81,7 @@ export const siteContent = {
     items: [
       {
         degree: 'Masters of Business Administration (Information Technology)',
-        year: '2015 - 2018',
+        year: '2025 - 2026',
       },
       {
         degree: 'Bachelor of Marketing',
