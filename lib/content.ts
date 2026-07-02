@@ -10,6 +10,7 @@ export interface PostMeta {
   slug: string
   author: string
   date?: string
+  updated?: string
   featuredImage?: string
   tags?: string[]
 }
@@ -31,6 +32,7 @@ function parseFrontmatter(data: Record<string, unknown>, fallbackSlug: string): 
     slug: String(data.slug ?? fallbackSlug),
     author: String(data.author ?? 'Adhham'),
     date: data.date ? String(data.date) : undefined,
+    updated: data.updated ? String(data.updated) : undefined,
     featuredImage: data.featuredImage ? String(data.featuredImage) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
   }

@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllSlugs, getPost } from '@/lib/content'
-import { formatArticleMeta } from '@/lib/format-article-meta'
 import { getPostLatinTitle } from '@/lib/get-post-latin-title'
 import { buildPostMetadata } from '@/lib/post-metadata'
 import { ArticleAuthor } from '@/components/article-author'
+import { ArticleByline } from '@/components/article-byline'
 import { MarkdownContent } from '@/components/markdown-content'
 import { PostFeaturedImage } from '@/components/post-featured-image'
+import { siteMeta } from '@/meta/site'
 import { writingMeta } from '@/meta/writing'
 
 interface WritingPostPageProps {
@@ -37,6 +38,9 @@ export default async function WritingPostPage({ params }: WritingPostPageProps) 
     notFound()
   }
 
+  const shareTitle = getPostLatinTitle(post)
+  const shareUrl = `${siteMeta.url}${writingMeta.path}/${post.slug}`
+
   return (
     <article>
       <Link href={writingMeta.path} className="writing-back">
@@ -44,14 +48,19 @@ export default async function WritingPostPage({ params }: WritingPostPageProps) 
       </Link>
       <header className="writing-article-header">
         <h1 className="writing-article-title">{post.title}</h1>
-        <p className="writing-article-meta">
-          {formatArticleMeta(post.author, post.date)}
-        </p>
+        <ArticleByline
+          author={post.author}
+          date={post.date}
+          updated={post.updated}
+          shareUrl={shareUrl}
+          shareTitle={shareTitle}
+          variant="writing"
+        />
       </header>
       {post.featuredImage && (
         <PostFeaturedImage
           src={post.featuredImage}
-          alt={getPostLatinTitle(post)}
+          alt={shareTitle}
           variant="writing"
         />
       )}

@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllSlugs, getPost } from '@/lib/content'
-import { formatArticleMeta } from '@/lib/format-article-meta'
 import { getPostLatinTitle } from '@/lib/get-post-latin-title'
 import { buildPostMetadata } from '@/lib/post-metadata'
 import { ArticleAuthor } from '@/components/article-author'
+import { ArticleByline } from '@/components/article-byline'
 import { MarkdownContent } from '@/components/markdown-content'
 import { PostFeaturedImage } from '@/components/post-featured-image'
 import { dhivehiMeta } from '@/meta/dhivehi'
+import { siteMeta } from '@/meta/site'
 
 interface DhivehiPostPageProps {
   params: Promise<{ slug: string }>
@@ -37,6 +38,9 @@ export default async function DhivehiPostPage({ params }: DhivehiPostPageProps) 
     notFound()
   }
 
+  const shareTitle = getPostLatinTitle(post)
+  const shareUrl = `${siteMeta.url}${dhivehiMeta.path}/${post.slug}`
+
   return (
     <article>
       <Link href={dhivehiMeta.path} className="dhivehi-back">
@@ -47,14 +51,19 @@ export default async function DhivehiPostPage({ params }: DhivehiPostPageProps) 
         {post.latinTitle && (
           <p className="dhivehi-article-latin-title">{getPostLatinTitle(post)}</p>
         )}
-        <p className="dhivehi-article-meta">
-          {formatArticleMeta(post.author, post.date)}
-        </p>
+        <ArticleByline
+          author={post.author}
+          date={post.date}
+          updated={post.updated}
+          shareUrl={shareUrl}
+          shareTitle={shareTitle}
+          variant="dhivehi"
+        />
       </header>
       {post.featuredImage && (
         <PostFeaturedImage
           src={post.featuredImage}
-          alt={getPostLatinTitle(post)}
+          alt={shareTitle}
           variant="dhivehi"
         />
       )}

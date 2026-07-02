@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { authorMeta } from '@/meta/author'
 
 interface ArticleAuthorProps {
@@ -22,6 +23,14 @@ export function ArticleAuthor({ author, variant }: ArticleAuthorProps) {
         <div className={`${prefix}-article-author-content`}>
           <p className={`${prefix}-article-author-name`}>{author}</p>
           <p className={`${prefix}-article-author-bio`}>{authorMeta.bio}</p>
+          <Link
+            href={authorMeta.twitter.url}
+            className={`${prefix}-article-author-twitter`}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {authorMeta.twitter.handle}
+          </Link>
         </div>
       </div>
     </footer>

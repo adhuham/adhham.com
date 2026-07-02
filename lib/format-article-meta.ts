@@ -1,15 +1,10 @@
+import type { PostMeta } from '@/lib/content'
 import { formatDate } from '@/lib/format-date'
 
-export function formatWrittenBy(author: string): string {
-  return `Written by: ${author}`
+export function getPostUpdatedDate(post: Pick<PostMeta, 'date' | 'updated'>): string | undefined {
+  return post.updated ?? post.date
 }
 
-export function formatArticleMeta(author: string, date?: string): string {
-  const byline = formatWrittenBy(author)
-
-  if (date) {
-    return `${byline} · ${formatDate(date)}`
-  }
-
-  return byline
+export function formatLastUpdated(date: string): string {
+  return `Last updated ${formatDate(date)}`
 }

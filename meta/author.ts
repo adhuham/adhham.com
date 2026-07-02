@@ -5,4 +5,8 @@ export const authorMeta = {
     alt: 'Adhham',
   },
   bio: 'Software engineer writing on systems, philosophy, technology, and the ideas that shape how we think.',
+  twitter: {
+    url: 'https://x.com/adhhamofficial',
+    handle: '@adhhamofficial',
+  },
 } as const
