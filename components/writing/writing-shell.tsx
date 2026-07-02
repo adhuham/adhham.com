@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { writingMeta } from '@/meta/writing'
 
 interface WritingShellProps {
@@ -9,7 +10,10 @@ export function WritingShell({ children }: WritingShellProps) {
     <div className="writing-theme">
       <div className="writing-shell">
         <header className="writing-blog-header">
-          <h1 className="writing-brand">{writingMeta.header}</h1>
+          <Link href={writingMeta.path} className="writing-blog-header-link">
+            <span className="writing-blog-name">{writingMeta.name}</span>
+            <span className="writing-blog-tagline">{writingMeta.tagline}</span>
+          </Link>
         </header>
         {children}
       </div>

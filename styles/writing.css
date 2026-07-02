@@ -23,22 +23,41 @@
 }
 
 .writing-blog-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.writing-brand {
-  font-family: var(--writing-serif);
-  font-size: 2rem;
+.writing-blog-header-link {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.writing-blog-header-link:hover .writing-blog-name,
+.writing-blog-header-link:hover .writing-blog-tagline {
+  color: var(--writing-accent);
+}
+
+.writing-blog-name {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--writing-ink);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--writing-muted);
+  line-height: 1.4;
+  transition: color 0.15s ease;
 }
 
-.writing-tagline {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--writing-muted);
-  line-height: 1.6;
+.writing-blog-tagline {
+  font-family: var(--writing-serif);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: color-mix(in srgb, var(--writing-muted) 75%, transparent);
+  line-height: 1.5;
+  transition: color 0.15s ease;
 }
 
 .writing-empty {

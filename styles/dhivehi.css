@@ -23,24 +23,41 @@
 }
 
 .dhivehi-blog-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   direction: rtl;
 }
 
-.dhivehi-brand {
-  font-family: var(--dhivehi-thaana);
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--dhivehi-ink);
+.dhivehi-blog-header-link {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  direction: rtl;
 }
 
-.dhivehi-tagline {
-  margin-top: 0.5rem;
+.dhivehi-blog-header-link:hover .dhivehi-blog-name,
+.dhivehi-blog-header-link:hover .dhivehi-blog-tagline {
+  color: var(--dhivehi-accent);
+}
+
+.dhivehi-blog-name {
   font-family: var(--dhivehi-thaana);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
   color: var(--dhivehi-muted);
-  line-height: 1.6;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.dhivehi-blog-tagline {
+  font-family: var(--dhivehi-thaana);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: color-mix(in srgb, var(--dhivehi-muted) 75%, transparent);
+  line-height: 1.5;
+  transition: color 0.15s ease;
 }
 
 .dhivehi-empty {
