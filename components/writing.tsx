@@ -1,4 +1,5 @@
-import { siteContent } from '@/lib/site-content'
+import Link from 'next/link'
+import { siteContent } from '@/meta/site-content'
 
 export function Writing() {
   const { writing } = siteContent
@@ -11,16 +12,12 @@ export function Writing() {
           {writing.description}
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {writing.items.map((blog, idx) => (
-            <a
-              key={idx}
+          {writing.items.map((blog) => (
+            <Link
+              key={blog.url}
               href={blog.url}
               className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card p-4 shadow-[0_12px_30px_rgba(0,0,0,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]"
             >
-              <div
-                className={`mb-4 h-24 rounded-2xl bg-gradient-to-br ${blog.tone}`}
-                aria-hidden="true"
-              />
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                 {blog.category}
               </p>
@@ -30,7 +27,7 @@ export function Writing() {
               <p className="text-xs leading-relaxed text-muted-foreground">
                 {blog.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

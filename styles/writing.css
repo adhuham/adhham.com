@@ -1,0 +1,237 @@
+.writing-theme {
+  --writing-bg: #f6f1e8;
+  --writing-surface: #fffdf8;
+  --writing-ink: #2a2218;
+  --writing-muted: #6b5f52;
+  --writing-accent: #7a3e2c;
+  --writing-border: #e4d8c8;
+  --writing-serif: var(--font-source-serif), 'Iowan Old Style', 'Palatino Linotype', serif;
+
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, rgba(112, 66, 20, 0.14), transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(112, 66, 20, 0.1), transparent 50%),
+    var(--writing-bg);
+  color: var(--writing-ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.writing-shell {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.writing-blog-header {
+  margin-bottom: 2.5rem;
+}
+
+.writing-brand {
+  font-family: var(--writing-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--writing-ink);
+}
+
+.writing-tagline {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--writing-muted);
+  line-height: 1.6;
+}
+
+.writing-empty {
+  color: var(--writing-muted);
+  line-height: 1.7;
+}
+
+.writing-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.writing-post-item + .writing-post-item {
+  border-top: 1px solid var(--writing-border);
+}
+
+.writing-post-link {
+  display: block;
+  padding: 1.25rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.writing-post-link:hover .writing-post-title {
+  color: var(--writing-accent);
+}
+
+.writing-post-title {
+  font-family: var(--writing-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.writing-post-meta {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--writing-muted);
+}
+
+.writing-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.writing-tag {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--writing-accent);
+}
+
+.writing-article-header {
+  margin-bottom: 2rem;
+}
+
+.writing-article-title {
+  font-family: var(--writing-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.writing-article-meta {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--writing-muted);
+}
+
+.writing-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.8125rem;
+  color: var(--writing-muted);
+  text-decoration: none;
+}
+
+.writing-back:hover {
+  color: var(--writing-accent);
+}
+
+.writing-prose {
+  font-family: var(--writing-serif);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--writing-ink);
+}
+
+.writing-prose > * + * {
+  margin-top: 1.25rem;
+}
+
+.writing-prose h2,
+.writing-prose h3 {
+  font-family: var(--writing-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.writing-prose h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.writing-prose h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.writing-prose a {
+  color: var(--writing-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.writing-prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--writing-border);
+  color: var(--writing-muted);
+  font-style: italic;
+}
+
+.writing-prose code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  background: var(--writing-surface);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+}
+
+.writing-prose pre {
+  overflow-x: auto;
+  background: var(--writing-surface);
+  border: 1px solid var(--writing-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.writing-prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.writing-prose ul,
+.writing-prose ol {
+  padding-left: 1.25rem;
+}
+
+.writing-article-author {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--writing-border);
+}
+
+.writing-article-author-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.writing-article-author-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--writing-border);
+  background: var(--writing-surface);
+}
+
+.writing-article-author-content {
+  min-width: 0;
+  padding-top: 0.125rem;
+}
+
+.writing-article-author-name {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--writing-ink);
+}
+
+.writing-article-author-bio {
+  margin-top: 0.375rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--writing-muted);
+}

@@ -1,3 +1,6 @@
+import { dhivehiMeta } from '@/meta/dhivehi'
+import { writingMeta } from '@/meta/writing'
+
 export const siteContent = {
   profile: {
     name: 'Adhham',
@@ -46,10 +49,8 @@ export const siteContent = {
     paragraphs: [
       'Hi, I’m Adhham. I’m a software engineer with approximately 8 years of experience building and working with production software systems.',
       'My interests span software engineering, cybersecurity, science, engineering, and emerging technologies, particularly where analytical thinking and creativity intersect. I am driven by curiosity and a desire to understand how things work at a fundamental level, whether through academic study, independent learning, or hands-on experimentation.',
-     // 'I enjoy learning concepts from first principles, exploring how ideas connect across disciplines, and turning abstract thinking into practical solutions.',
       'Currently, I am focused on building stronger technical foundations while exploring areas such as cybersecurity, engineering, robotics, and intelligent systems. I write about science and technology, sharing what I learn and exploring ideas that shape how we think, create, and understand the world.',
-      //'I write about technology, engineering, business, and science, sharing what I learn and exploring ideas that shape how we think, create, and understand the world.',
-      'I hold a Bachelor’s degree in Marketing and an MBA focused on Information Technology, and I work at the Ministry of Finance, Government of Maldives.'
+      'I hold a Bachelor’s degree in Marketing and an MBA focused on Information Technology, and I work at the Ministry of Finance, Government of Maldives.',
     ],
   },
   cta: {
@@ -90,11 +91,6 @@ export const siteContent = {
         degree: 'Diploma in Information Technology',
         year: '2016 - 2019',
       },
-      /*{
-        degree: 'C3 in Electro-technical Technology',
-        year: '2024 - 2024',
-      },
-      */
     ],
   },
   building: {
@@ -130,25 +126,22 @@ export const siteContent = {
   },
   writing: {
     title: 'Writing',
-    description:
-      'Essays, notes, and observations on building thoughtful digital experiences.',
+    description: `Two writing systems: ${writingMeta.header} and ${dhivehiMeta.latinTitle}.`,
     items: [
       {
-        name: 'Transient',
-        description: 'Thoughts on web development, design patterns, and digital innovation.',
-        url: '#',
-        tone: 'from-stone-900 via-stone-800 to-stone-700',
-        category: 'Essay',
+        name: writingMeta.header,
+        description: writingMeta.metadata.description,
+        url: writingMeta.path,
+        category: 'English',
       },
       {
-        name: 'Dhethiki',
-        description: 'Explorations in user experience, accessibility, and thoughtful design.',
-        url: '#',
-        tone: 'from-emerald-700 via-emerald-600 to-emerald-500',
-        category: 'Notes',
+        name: dhivehiMeta.latinTitle,
+        description: dhivehiMeta.metadata.description,
+        url: dhivehiMeta.path,
+        category: 'Dhivehi',
       },
     ],
-  },  
+  },
   projects: {
     title: 'Projects',
     description:

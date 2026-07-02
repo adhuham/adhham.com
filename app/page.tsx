@@ -17,9 +17,9 @@ export default function Home() {
       <CallToAction />
       <WorkExperience />
       <Education />
+      <Writing />
       {/*
       <CurrentlyBuilding />
-      <Writing />
       <Projects />
       */}
       <Contact />

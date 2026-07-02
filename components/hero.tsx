@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { siteContent } from '@/lib/site-content'
+import { siteContent } from '@/meta/site-content'
 
 const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
 

@@ -1,4 +1,4 @@
-import { siteContent } from '@/lib/site-content'
+import { siteContent } from '@/meta/site-content'
 
 type CallToActionProps = {
   status?: 'open' | 'closed'
