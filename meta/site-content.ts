@@ -132,13 +132,11 @@ export const siteContent = {
         name: writingMeta.header,
         description: writingMeta.metadata.description,
         url: writingMeta.path,
-        category: 'English',
       },
       {
         name: dhivehiMeta.latinTitle,
         description: dhivehiMeta.metadata.description,
         url: dhivehiMeta.path,
-        category: 'Dhivehi',
       },
     ],
   },

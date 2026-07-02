@@ -11,16 +11,13 @@ export function Writing() {
         <p className="mb-5 max-w-lg text-[13px] leading-relaxed text-muted-foreground/90">
           {writing.description}
         </p>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-1">
           {writing.items.map((blog) => (
             <Link
               key={blog.url}
               href={blog.url}
-              className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card p-4 shadow-[0_12px_30px_rgba(0,0,0,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]"
+              className="group relative overflow-hidden rounded-xl border border-border/60  p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]"
             >
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                {blog.category}
-              </p>
               <h4 className="mb-2 text-sm font-semibold text-foreground transition-colors group-hover:text-foreground/80">
                 {blog.name}
               </h4>
