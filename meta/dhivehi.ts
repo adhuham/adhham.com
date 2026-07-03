@@ -6,7 +6,7 @@ const author = 'Adhham'
 export const dhivehiMeta = {
   name: 'ފިކުރާތު',
   latinTitle: 'Fikuraathu',
-  tagline: 'ފިލްސޮފީ، ތަޖުރިބާ، އަދި ދިރިއުޅުމުގެ ގޮތެން ލިޔެނިވި ތަން.',
+  tagline: 'އަހަންނަށް ވިސްނެއެވެ. އެހެންކަމުން، އަހަރެން ލިޔަމެވެ.',
   author,
   path: '/dhivehi',
   post: {
@@ -14,15 +14,15 @@ export const dhivehiMeta = {
   },
   metadata: {
     title: `${latinTitle} — ${author}`,
-    description: 'Dhivehi writing on philosophy, experience, and living.',
+    description: 'Reflections on thought, life, and perception, written in Dhivehi.',
     openGraph: {
       title: `${latinTitle} — ${author}`,
-      description: 'Dhivehi writing on philosophy, experience, and living.',
+      description: 'Reflections on thought, life, and perception, written in Dhivehi.',
     },
     twitter: {
       card: 'summary',
       title: `${latinTitle} — ${author}`,
-      description: 'Dhivehi writing on philosophy, experience, and living.',
+      description: 'Reflections on thought, life, and perception, written in Dhivehi.',
     },
   } satisfies Metadata,
 } as const

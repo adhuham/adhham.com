@@ -126,7 +126,8 @@ export const siteContent = {
   },
   writing: {
     title: 'Writing',
-    description: `Two writing systems: ${writingMeta.header} and ${dhivehiMeta.latinTitle}.`,
+    description: `A collection of essays and reflections on systems, software, philosophy, science, and life, published across two distinct 
+      spaces: Cogito Ergo Scribo, my writing in English, and Fikuraathu, my writing in Dhivehi.`,
     items: [
       {
         name: writingMeta.header,

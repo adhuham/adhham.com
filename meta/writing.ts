@@ -14,15 +14,15 @@ export const writingMeta = {
   },
   metadata: {
     title: `${header} — ${author}`,
-    description: 'Essays on systems thinking, philosophy, and intellectual exploration.',
+    description: 'Essays on systems thinking, software, technology, and anything that sparks my curiosity.',
     openGraph: {
       title: `${header} — ${author}`,
-      description: 'Essays on systems thinking, philosophy, and intellectual exploration.',
+      description: 'Essays on systems thinking, software, technology, and anything that sparks my curiosity.',
     },
     twitter: {
       card: 'summary',
       title: `${header} — ${author}`,
-      description: 'Essays on systems thinking, philosophy, and intellectual exploration.',
+      description: 'Essays on systems thinking, software, technology, and anything that sparks my curiosity.',
     },
   } satisfies Metadata,
 } as const
