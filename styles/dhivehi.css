@@ -276,6 +276,7 @@
 }
 
 .dhivehi-back {
+  font-family: var(--dhivehi-content);
   display: inline-block;
   margin-bottom: 2rem;
   font-size: 0.8125rem;

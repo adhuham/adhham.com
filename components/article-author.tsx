@@ -22,16 +22,18 @@ export function ArticleAuthor({ author, variant }: ArticleAuthorProps) {
           className={`${prefix}-article-author-photo`}
         />
         <div className={`${prefix}-article-author-content`}>
-          <p className={`${prefix}-article-author-name`}>{displayName}</p>
+          <div className={`${prefix}-article-author-name-container`}>
+            <p className={`${prefix}-article-author-name`}>{displayName}</p>
+            <Link
+              href={authorMeta.twitter.url}
+              className={`${prefix}-article-author-twitter`}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {authorMeta.twitter.handle}
+            </Link>
+          </div>
           <p className={`${prefix}-article-author-bio`}>{authorMeta.bio}</p>
-          <Link
-            href={authorMeta.twitter.url}
-            className={`${prefix}-article-author-twitter`}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {authorMeta.twitter.handle}
-          </Link>
         </div>
       </div>
     </footer>

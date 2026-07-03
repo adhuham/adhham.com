@@ -9,7 +9,7 @@ interface PostListProps {
 
 export function DhivehiPostList({ posts }: PostListProps) {
   if (posts.length === 0) {
-    return <p className="dhivehi-empty">މިވަގުތު ލިޔުންތައް ނެތް.</p>
+    return <p className="dhivehi-empty">އެއްވެސް ލިޔުމެއް ނެތް</p>
   }
 
   return (
