@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { authorMeta } from '@/meta/author'
+import { authorMeta, getAuthorDisplayName } from '@/meta/author'
 import { formatLastUpdated, getPostUpdatedDate } from '@/lib/format-article-meta'
 import { ShareButton } from '@/components/share-button'
 
@@ -22,6 +22,7 @@ export function ArticleByline({
 }: ArticleBylineProps) {
   const prefix = variant === 'writing' ? 'writing' : 'dhivehi'
   const lastUpdated = getPostUpdatedDate({ date, updated })
+  const displayName = getAuthorDisplayName(variant, author)
 
   return (
     <div className={`${prefix}-article-byline`}>
@@ -34,7 +35,7 @@ export function ArticleByline({
           className={`${prefix}-article-byline-photo`}
         />
         <div className={`${prefix}-article-byline-text`}>
-          <p className={`${prefix}-article-byline-name`}>{author}</p>
+          <p className={`${prefix}-article-byline-name`}>{displayName}</p>
           {lastUpdated && (
             <p className={`${prefix}-article-byline-date`}>{formatLastUpdated(lastUpdated)}</p>
           )}

@@ -21,6 +21,28 @@
 }
 
 @font-face {
+  font-family: 'MV Typewriter';
+  src:
+    url('/fonts/dhivehi/mv-typewriter-semibold.woff2') format('woff2'),
+    url('/fonts/dhivehi/mv-typewriter-semibold.woff') format('woff'),
+    url('/fonts/dhivehi/mv-typewriter-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MV Typewriter';
+  src:
+    url('/fonts/dhivehi/mv-typewriter-bold.woff2') format('woff2'),
+    url('/fonts/dhivehi/mv-typewriter-bold.woff') format('woff'),
+    url('/fonts/dhivehi/mv-typewriter-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Magey Huseynu';
   src:
     url('/fonts/dhivehi/magey-huseynu.woff2') format('woff2'),

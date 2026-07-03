@@ -1,5 +1,6 @@
 export const authorMeta = {
   name: 'Adhham',
+  dhivehiName: 'އަދްހަމް',
   image: {
     src: '/profile.jpg?v=1',
     alt: 'Adhham',
@@ -10,3 +11,10 @@ export const authorMeta = {
     handle: '@adhhamofficial',
   },
 } as const
+
+export function getAuthorDisplayName(
+  variant: 'writing' | 'dhivehi',
+  author: string
+): string {
+  return variant === 'dhivehi' ? authorMeta.dhivehiName : author
+}

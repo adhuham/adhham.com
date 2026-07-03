@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { authorMeta } from '@/meta/author'
+import { authorMeta, getAuthorDisplayName } from '@/meta/author'
 
 interface ArticleAuthorProps {
   author: string
@@ -9,6 +9,7 @@ interface ArticleAuthorProps {
 
 export function ArticleAuthor({ author, variant }: ArticleAuthorProps) {
   const prefix = variant === 'writing' ? 'writing' : 'dhivehi'
+  const displayName = getAuthorDisplayName(variant, author)
 
   return (
     <footer className={`${prefix}-article-author`}>
@@ -21,7 +22,7 @@ export function ArticleAuthor({ author, variant }: ArticleAuthorProps) {
           className={`${prefix}-article-author-photo`}
         />
         <div className={`${prefix}-article-author-content`}>
-          <p className={`${prefix}-article-author-name`}>{author}</p>
+          <p className={`${prefix}-article-author-name`}>{displayName}</p>
           <p className={`${prefix}-article-author-bio`}>{authorMeta.bio}</p>
           <Link
             href={authorMeta.twitter.url}
