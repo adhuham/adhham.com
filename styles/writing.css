@@ -4,7 +4,7 @@
   --writing-ink: #2a2218;
   --writing-muted: #6b5f52;
   --writing-accent: #7a3e2c;
-  --writing-border: #e4d8c8;
+  --writing-border: #e8e3dd;
   --writing-serif: var(--font-source-serif), 'Iowan Old Style', 'Palatino Linotype', serif;
 
   min-height: 100vh;
@@ -140,7 +140,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--writing-border);
+  border-bottom: 1px solid var(--writing-border);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .writing-article-byline-main {

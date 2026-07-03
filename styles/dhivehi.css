@@ -92,7 +92,7 @@
 
 .dhivehi-post-title {
   font-family: var(--dhivehi-heading);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   transition: color 0.15s ease;
 }
@@ -394,8 +394,8 @@
 }
 
 .dhivehi-article-author-name {
-  font-family: var(--dhivehi-heading);
-  font-size: 0.9375rem;
+  font-family: var(--dhivehi-content);
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
   color: var(--dhivehi-ink);
