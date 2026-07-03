@@ -1,5 +1,6 @@
 'use client'
 
+import { Share2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 interface SharePlatform {
@@ -22,7 +23,7 @@ function buildPlatforms(url: string, title: string): SharePlatform[] {
   return [
     {
       id: 'x',
-      label: 'X',
+      label: 'X/Twitter',
       href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
     },
     {
@@ -105,11 +106,12 @@ export function ShareButton({ url, title, variant }: ShareButtonProps) {
       <button
         type="button"
         className={`${prefix}-share-button`}
+        aria-label="Share"
         aria-expanded={open}
         aria-haspopup="menu"
         onClick={() => setOpen((current) => !current)}
       >
-        Share
+        <Share2 size={16} strokeWidth={2} aria-hidden="true" />
       </button>
       {open && (
         <div className={`${prefix}-share-menu`} role="menu">
