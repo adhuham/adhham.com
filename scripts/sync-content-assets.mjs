@@ -3,7 +3,7 @@ import path from 'path'
 
 const sections = ['writing', 'dhivehi']
 
-function copyDir(src, dest) {
+function copyDir(src, dest, { exclude = [] } = {}) {
   if (!fs.existsSync(src)) {
     return 0
   }
@@ -13,15 +13,21 @@ function copyDir(src, dest) {
   let copied = 0
 
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (exclude.includes(entry.name)) {
+      continue
+    }
+
     const srcPath = path.join(src, entry.name)
     const destPath = path.join(dest, entry.name)
 
     if (entry.isDirectory()) {
-      copied += copyDir(srcPath, destPath)
+      copied += copyDir(srcPath, destPath, { exclude })
     } else if (entry.isFile()) {
       fs.mkdirSync(path.dirname(destPath), { recursive: true })
       fs.copyFileSync(srcPath, destPath)
-      console.log(`  copied ${path.relative(process.cwd(), srcPath)} → ${path.relative(process.cwd(), destPath)}`)
+      console.log(
+        `  copied ${path.relative(process.cwd(), srcPath)} → ${path.relative(process.cwd(), destPath)}`,
+      )
       copied += 1
     }
   }
@@ -32,16 +38,35 @@ function copyDir(src, dest) {
 let totalCopied = 0
 
 for (const section of sections) {
-  const src = path.join('content', section, 'media')
-  const dest = path.join('public', 'content', section, 'media')
+  const sectionDir = path.join('content', section)
 
-  if (!fs.existsSync(src)) {
-    console.log(`sync-content-assets: no media dir for ${section}, skipping`)
+  if (!fs.existsSync(sectionDir)) {
     continue
   }
 
-  console.log(`sync-content-assets: syncing ${section} media...`)
-  totalCopied += copyDir(src, dest)
+  const sectionMedia = path.join(sectionDir, 'media')
+  if (fs.existsSync(sectionMedia)) {
+    const dest = path.join('public', 'content', section, 'media')
+    console.log(`sync-content-assets: syncing ${section} section media...`)
+    totalCopied += copyDir(sectionMedia, dest)
+  }
+
+  for (const entry of fs.readdirSync(sectionDir, { withFileTypes: true })) {
+    if (!entry.isDirectory() || entry.name === 'media') {
+      continue
+    }
+
+    const contentMd = path.join(sectionDir, entry.name, 'content.md')
+    if (!fs.existsSync(contentMd)) {
+      continue
+    }
+
+    const src = path.join(sectionDir, entry.name)
+    const dest = path.join('public', 'content', section, entry.name)
+
+    console.log(`sync-content-assets: syncing ${section}/${entry.name} post assets...`)
+    totalCopied += copyDir(src, dest, { exclude: ['content.md'] })
+  }
 }
 
 console.log(`sync-content-assets: done (${totalCopied} file${totalCopied === 1 ? '' : 's'} copied)`)

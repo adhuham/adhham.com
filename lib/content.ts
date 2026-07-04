@@ -19,38 +19,111 @@ export interface Post extends PostMeta {
   content: string
 }
 
+interface PostSource {
+  slug: string
+  filePath: string
+  isFolder: boolean
+}
+
+interface AssetResolveOptions {
+  postSlug?: string
+  postIsFolder?: boolean
+}
+
 const contentRoot = path.join(process.cwd(), 'content')
 
 function sectionDir(section: ContentSection): string {
   return path.join(contentRoot, section)
 }
 
-function parseFrontmatter(data: Record<string, unknown>, fallbackSlug: string, section: ContentSection): PostMeta {
-  const featuredImage = data.featuredImage ? String(data.featuredImage) : undefined
+function postDir(section: ContentSection, slug: string): string {
+  return path.join(sectionDir(section), slug)
+}
 
-  return {
-    title: String(data.title ?? 'Untitled'),
-    latinTitle: data.latinTitle ? String(data.latinTitle) : undefined,
-    slug: String(data.slug ?? fallbackSlug),
-    author: String(data.author ?? 'Adhham'),
-    date: data.date ? String(data.date) : undefined,
-    updated: data.updated ? String(data.updated) : undefined,
-    featuredImage: featuredImage
-      ? resolveContentAssetPath(section, featuredImage)
-      : undefined,
-    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
+function discoverPostSources(section: ContentSection): PostSource[] {
+  const dir = sectionDir(section)
+
+  if (!fs.existsSync(dir)) {
+    return []
   }
+
+  const sources = new Map<string, PostSource>()
+
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.endsWith('.md')) {
+      const slug = entry.name.replace(/\.md$/, '')
+      sources.set(slug, {
+        slug,
+        filePath: path.join(dir, entry.name),
+        isFolder: false,
+      })
+      continue
+    }
+
+    if (entry.isDirectory() && entry.name !== 'media') {
+      const contentPath = path.join(dir, entry.name, 'content.md')
+      if (fs.existsSync(contentPath)) {
+        sources.set(entry.name, {
+          slug: entry.name,
+          filePath: contentPath,
+          isFolder: true,
+        })
+      }
+    }
+  }
+
+  return [...sources.values()]
+}
+
+function findPostSource(section: ContentSection, slug: string): PostSource | null {
+  return discoverPostSources(section).find((source) => source.slug === slug) ?? null
+}
+
+function resolvePostFolderAssetPath(
+  section: ContentSection,
+  postSlug: string,
+  relativePath: string,
+): string | null {
+  const filename = relativePath.replace(/^\//, '').replace(/^\.\//, '')
+
+  if (!filename || filename.includes('..')) {
+    return null
+  }
+
+  const assetPath = path.join(postDir(section, postSlug), filename)
+
+  if (fs.existsSync(assetPath) && fs.statSync(assetPath).isFile()) {
+    return `/content/${section}/${postSlug}/${filename.split(path.sep).join('/')}`
+  }
+
+  return null
 }
 
 export function resolveContentAssetPath(
   section: ContentSection,
   relativePath: string,
+  options: AssetResolveOptions = {},
 ): string {
   if (
-    relativePath.startsWith('/') ||
     relativePath.startsWith('http://') ||
-    relativePath.startsWith('https://')
+    relativePath.startsWith('https://') ||
+    relativePath.startsWith('/content/')
   ) {
+    return relativePath
+  }
+
+  const { postSlug, postIsFolder } = options
+
+  if (postIsFolder && postSlug) {
+    const postLocal = resolvePostFolderAssetPath(section, postSlug, relativePath)
+    if (postLocal) {
+      return postLocal
+    }
+
+    if (relativePath.startsWith('/')) {
+      return relativePath
+    }
+  } else if (relativePath.startsWith('/')) {
     return relativePath
   }
 
@@ -61,30 +134,61 @@ export function resolveContentAssetPath(
 export function rewriteContentAssetUrls(
   markdown: string,
   section: ContentSection,
+  options: AssetResolveOptions = {},
 ): string {
   return markdown.replace(
-    /(!\[[^\]]*]\()(\.\/)?(media\/[^)\s]+)(\))/g,
-    (_match, prefix: string, _dotSlash: string | undefined, assetPath: string, suffix: string) =>
-      `${prefix}${resolveContentAssetPath(section, assetPath)}${suffix}`,
+    /!\[([^\]]*)\]\(([^)\s]+)\)/g,
+    (_match, alt: string, url: string) =>
+      `![${alt}](${resolveContentAssetPath(section, url, options)})`,
   )
 }
 
-export function getPosts(section: ContentSection): PostMeta[] {
-  const dir = sectionDir(section)
+function parseFrontmatter(
+  data: Record<string, unknown>,
+  fallbackSlug: string,
+  section: ContentSection,
+  options: AssetResolveOptions,
+): PostMeta {
+  const featuredImage = data.featuredImage ? String(data.featuredImage) : undefined
 
-  if (!fs.existsSync(dir)) {
-    return []
+  return {
+    title: String(data.title ?? 'Untitled'),
+    latinTitle: data.latinTitle ? String(data.latinTitle) : undefined,
+    slug: String(data.slug ?? fallbackSlug),
+    author: String(data.author ?? 'Adhham'),
+    date: data.date ? String(data.date) : undefined,
+    updated: data.updated ? String(data.updated) : undefined,
+    featuredImage: featuredImage
+      ? resolveContentAssetPath(section, featuredImage, options)
+      : undefined,
+    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
   }
+}
 
-  const posts = fs
-    .readdirSync(dir)
-    .filter((file) => file.endsWith('.md'))
-    .map((file) => {
-      const slug = file.replace(/\.md$/, '')
-      const source = fs.readFileSync(path.join(dir, file), 'utf8')
-      const { data } = matter(source)
-      return parseFrontmatter(data, slug, section)
+function loadPostSource(source: PostSource, section: ContentSection): Post {
+  const sourceText = fs.readFileSync(source.filePath, 'utf8')
+  const { data, content } = matter(sourceText)
+  const options: AssetResolveOptions = {
+    postSlug: source.slug,
+    postIsFolder: source.isFolder,
+  }
+  const meta = parseFrontmatter(data, source.slug, section, options)
+
+  return {
+    ...meta,
+    content: rewriteContentAssetUrls(content, section, options),
+  }
+}
+
+export function getPosts(section: ContentSection): PostMeta[] {
+  const posts = discoverPostSources(section).map((source) => {
+    const sourceText = fs.readFileSync(source.filePath, 'utf8')
+    const { data } = matter(sourceText)
+    return parseFrontmatter(data, source.slug, section, {
+      postSlug: source.slug,
+      postIsFolder: source.isFolder,
     })
+  })
 
   return posts.sort((a, b) => {
     if (!a.date && !b.date) return a.title.localeCompare(b.title)
@@ -95,17 +199,13 @@ export function getPosts(section: ContentSection): PostMeta[] {
 }
 
 export function getPost(section: ContentSection, slug: string): Post | null {
-  const filePath = path.join(sectionDir(section), `${slug}.md`)
+  const source = findPostSource(section, slug)
 
-  if (!fs.existsSync(filePath)) {
+  if (!source) {
     return null
   }
 
-  const source = fs.readFileSync(filePath, 'utf8')
-  const { data, content } = matter(source)
-  const meta = parseFrontmatter(data, slug, section)
-
-  return { ...meta, content: rewriteContentAssetUrls(content, section) }
+  return loadPostSource(source, section)
 }
 
 export function getAllSlugs(section: ContentSection): string[] {
