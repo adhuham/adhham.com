@@ -16,10 +16,25 @@ export const viewport: Viewport = {
   userScalable: true,
 }
 
+const title = 'Adhham'
+const description = 'Building software and exploring engineering through projects, experiments, and writing.'
+const image = '/site-image.png'
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteMeta.url),
-  title: 'Adhham',
-  description: 'Building software and exploring engineering through projects, experiments, and writing.',
+  title,
+  description,
+  openGraph: {
+    title ,
+    description,
+    images: [image],
+  },
+  twitter: {
+    card: 'summary',
+    title,
+    description,
+    images: [image],
+  },
   icons: {
     icon: [
       {

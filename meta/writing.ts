@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 const header = 'Cogito Ergo Scribo / Sine Fine'
 const description = 'Essays on systems thinking, software, technology, and anything that sparks my curiosity.'
+const image = '/site-image-cogito.png'
 
 export const writingMeta = {
   name: 'Cogito Ergo Scribo',
@@ -17,11 +18,13 @@ export const writingMeta = {
     openGraph: {
       title: `${header} — ${description}`,
       description,
+      images: [image],
     },
     twitter: {
       card: 'summary',
       title: `${header} — ${description}`,
       description,
+      images: [image],
     },
     icons: {
       icon: [

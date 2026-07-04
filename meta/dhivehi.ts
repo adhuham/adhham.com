@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 
 const latinTitle = 'Fikuraathu'
 const description = 'Essays and reflections in Dhivehi'
+const image = '/site-image-fikuraathu.png'
 
 export const dhivehiMeta = {
   name: 'ފިކުރާތު',
   latinTitle: 'Fikuraathu',
-  tagline: 'އަހަންނަށް ވިސްނެއެވެ. އެހެންކަމުން، އަހަރެން ލިޔަމެވެ.',
+  tagline: 'އަހަރެން ވިސްނަމެވެ. އެހެންކަމުން، އަހަރެން ލިޔަމެވެ.',
   description,
   path: '/dhivehi',
   post: {
@@ -18,11 +19,13 @@ export const dhivehiMeta = {
     openGraph: {
       title: `${latinTitle} — ${description}`,
       description,
+      images: [image],
     },
     twitter: {
       card: 'summary',
       title: `${latinTitle} — ${description}`,
       description,
+      images: [image],
     },
     icons: {
       icon: [
