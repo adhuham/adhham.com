@@ -5,7 +5,7 @@ export const authorMeta = {
     src: '/profile.jpg?v=1',
     alt: 'Adhham',
   },
-  bio: 'Software engineer writing on systems, philosophy, technology, and the ideas that shape how we think.',
+  bio: 'Software engineer writing on systems, software, science, life and the ideas that shape how we think.',
   twitter: {
     url: 'https://x.com/adhhamofficial',
     handle: '@adhhamofficial',
