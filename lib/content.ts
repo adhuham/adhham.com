@@ -32,6 +32,10 @@ interface AssetResolveOptions {
 
 const contentRoot = path.join(process.cwd(), 'content')
 
+function isDraftEntry(name: string): boolean {
+  return name.startsWith('__')
+}
+
 function sectionDir(section: ContentSection): string {
   return path.join(contentRoot, section)
 }
@@ -50,6 +54,10 @@ function discoverPostSources(section: ContentSection): PostSource[] {
   const sources = new Map<string, PostSource>()
 
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (isDraftEntry(entry.name)) {
+      continue
+    }
+
     if (entry.isFile() && entry.name.endsWith('.md')) {
       const slug = entry.name.replace(/\.md$/, '')
       sources.set(slug, {

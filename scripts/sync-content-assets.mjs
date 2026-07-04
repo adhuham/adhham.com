@@ -52,7 +52,7 @@ for (const section of sections) {
   }
 
   for (const entry of fs.readdirSync(sectionDir, { withFileTypes: true })) {
-    if (!entry.isDirectory() || entry.name === 'media') {
+    if (!entry.isDirectory() || entry.name === 'media' || entry.name.startsWith('__')) {
       continue
     }
 
