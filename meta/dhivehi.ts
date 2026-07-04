@@ -1,28 +1,28 @@
 import type { Metadata } from 'next'
 
 const latinTitle = 'Fikuraathu'
-const author = 'Adhham'
+const description = 'Essays and reflections in Dhivehi'
 
 export const dhivehiMeta = {
   name: 'ފިކުރާތު',
   latinTitle: 'Fikuraathu',
   tagline: 'އަހަންނަށް ވިސްނެއެވެ. އެހެންކަމުން، އަހަރެން ލިޔަމެވެ.',
-  author,
+  description,
   path: '/dhivehi',
   post: {
     back: '← ހުރިހާ ލިޔުންތައް',
   },
   metadata: {
-    title: `${latinTitle} — ${author}`,
-    description: 'Reflections on thought, life, and perception, written in Dhivehi.',
+    title: `${latinTitle} — ${description}`,
+    description,
     openGraph: {
-      title: `${latinTitle} — ${author}`,
-      description: 'Reflections on thought, life, and perception, written in Dhivehi.',
+      title: `${latinTitle} — ${description}`,
+      description,
     },
     twitter: {
       card: 'summary',
-      title: `${latinTitle} — ${author}`,
-      description: 'Reflections on thought, life, and perception, written in Dhivehi.',
+      title: `${latinTitle} — ${description}`,
+      description,
     },
     icons: {
       icon: [
