@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { authorMeta, getAuthorDisplayName } from '@/meta/author'
 import { formatLastUpdated, getPostUpdatedDate } from '@/lib/format-article-meta'
-import { ShareButton } from '@/components/share-button'
+import { ShareButton } from '@/components/blog/share-button'
 
 interface ArticleBylineProps {
   author: string

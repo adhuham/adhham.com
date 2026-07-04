@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Manrope } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { Inter } from 'next/font/google'
 import Script from 'next/script'
-import { siteMeta } from '@/meta/site'
-import './globals.css'
+import { siteMetadata } from '@/meta/site'
+import '@/styles/global.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,43 +15,7 @@ export const viewport: Viewport = {
   userScalable: true,
 }
 
-const title = 'Adhham'
-const description = 'Building software and exploring engineering through projects, experiments, and writing.'
-const image = '/site-image.png'
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteMeta.url),
-  title,
-  description,
-  openGraph: {
-    title ,
-    description,
-    images: [image],
-  },
-  twitter: {
-    card: 'summary',
-    title,
-    description,
-    images: [image],
-  },
-  icons: {
-    icon: [
-      {
-        url: '/favicon.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/favicon.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/favicon.png',
-        type: 'image/png',
-      },
-    ],
-    apple: '/favicon.png',
-  },
-}
+export const metadata = siteMetadata
 
 export default function RootLayout({
   children,

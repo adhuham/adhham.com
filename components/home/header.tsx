@@ -1,4 +1,4 @@
-import { SocialLinks } from '@/components/social-links'
+import { SocialLinks } from '@/components/home/social-links'
 
 export function Header() {
   return (

@@ -1,13 +1,13 @@
-import { Header } from '@/components/header'
-import { Hero } from '@/components/hero'
-import { CallToAction } from '@/components/call-to-action'
-import { WorkExperience } from '@/components/work-experience'
-import { Education } from '@/components/education'
-import { CurrentlyBuilding } from '@/components/currently-building'
-import { Writing } from '@/components/writing'
-import { Projects } from '@/components/projects'
-import { Contact } from '@/components/contact'
-import { Footer } from '@/components/footer'
+import { Header } from '@/components/home/header'
+import { Hero } from '@/components/home/hero'
+import { CallToAction } from '@/components/home/call-to-action'
+import { WorkExperience } from '@/components/home/work-experience'
+import { Education } from '@/components/home/education'
+import { CurrentlyBuilding } from '@/components/home/currently-building'
+import { Writing } from '@/components/home/writing'
+import { Projects } from '@/components/home/projects'
+import { Contact } from '@/components/home/contact'
+import { Footer } from '@/components/home/footer'
 
 export default function Home() {
   return (

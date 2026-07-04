@@ -5,33 +5,19 @@
   --dhivehi-muted: #6b5f52;
   --dhivehi-accent: #7a3e2c;
   --dhivehi-border: #eeeae4;
-  --dhivehi-heading: 'MV Aammu FK',  'MV Waheed', 'Faruma', sans-serif;
+  --dhivehi-heading: 'MV Aammu FK', 'MV Waheed', 'Faruma', sans-serif;
   --dhivehi-content: 'MV Typewriter', 'Faruma', sans-serif;
   --dhivehi-brand: 'Magey Huseynu', 'MV Aammu FK', sans-serif;
 
-  min-height: 100vh;
   color: var(--dhivehi-ink);
-  font-family: var(--font-inter), system-ui, sans-serif;
-}
-
-.dhivehi-shell {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  background: linear-gradient(180deg, var(--dhivehi-bg) 0%, #f0ebe2 100%);
 }
 
 .dhivehi-blog-header {
-  margin-bottom: 2rem;
   direction: rtl;
 }
 
 .dhivehi-blog-header-link {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: inherit;
   direction: rtl;
 }
 
@@ -68,21 +54,7 @@
   font-family: var(--dhivehi-content);
 }
 
-.dhivehi-post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dhivehi-post-item + .dhivehi-post-item {
-  border-top: 1px solid var(--dhivehi-border);
-}
-
 .dhivehi-post-link {
-  display: block;
-  padding: 1.25rem 0;
-  text-decoration: none;
-  color: inherit;
   direction: rtl;
 }
 
@@ -106,12 +78,6 @@
   text-align: right;
 }
 
-.dhivehi-post-meta {
-  margin-top: 0.35rem;
-  font-size: 0.8125rem;
-  color: var(--dhivehi-muted);
-}
-
 .dhivehi-post-tags {
   display: flex;
   flex-wrap: wrap;
@@ -127,22 +93,7 @@
 }
 
 .dhivehi-article-header {
-  margin-bottom: 2rem;
   direction: rtl;
-}
-
-.dhivehi-featured-image {
-  margin-bottom: 2rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid var(--dhivehi-border);
-  background: var(--dhivehi-surface);
-}
-
-.dhivehi-featured-image-img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .dhivehi-article-title {
@@ -163,34 +114,14 @@
 }
 
 .dhivehi-article-byline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 2rem;
   direction: rtl;
-  border-top: 1px solid var(--dhivehi-border);
-  border-bottom: 1px solid var(--dhivehi-border);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .dhivehi-article-byline-main {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-width: 0;
   direction: rtl;
 }
 
 .dhivehi-article-byline-photo {
-  width: 45px;
-  height: 45px;
-  border-radius: 9999px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 1px solid var(--dhivehi-border);
-  background: var(--dhivehi-surface);
   order: 1;
 }
 
@@ -206,75 +137,6 @@
   font-weight: 800;
   line-height: 1.4;
   color: var(--dhivehi-ink);
-}
-
-.dhivehi-article-byline-date {
-  margin-top: 0.125rem;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  color: var(--dhivehi-muted);
-  direction: ltr;
-  text-align: right;
-}
-
-.dhivehi-share {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.dhivehi-share-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  appearance: none;
-  border: 1px solid var(--dhivehi-border);
-  border-radius: 9999px;
-  background: var(--dhivehi-surface);
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  color: var(--dhivehi-ink);
-  cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease;
-}
-
-.dhivehi-share-button:hover {
-  border-color: var(--dhivehi-accent);
-  color: var(--dhivehi-accent);
-}
-
-.dhivehi-share-menu {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  z-index: 20;
-  min-width: 10rem;
-  padding: 0.375rem;
-  border: 1px solid var(--dhivehi-border);
-  border-radius: 0.5rem;
-  background: var(--dhivehi-surface);
-  box-shadow: 0 12px 30px rgba(42, 34, 24, 0.08);
-}
-
-.dhivehi-share-menu-item {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.625rem;
-  border: 0;
-  border-radius: 0.375rem;
-  background: transparent;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  color: var(--dhivehi-ink);
-  text-align: left;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.dhivehi-share-menu-item:hover {
-  background: color-mix(in srgb, var(--dhivehi-border) 45%, transparent);
 }
 
 .dhivehi-back {
@@ -298,10 +160,6 @@
   direction: rtl;
 }
 
-.dhivehi-prose > * + * {
-  margin-top: 1.25rem;
-}
-
 .dhivehi-prose h2,
 .dhivehi-prose h3 {
   font-family: var(--dhivehi-heading);
@@ -322,8 +180,6 @@
 
 .dhivehi-prose a {
   color: var(--dhivehi-accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .dhivehi-prose blockquote {
@@ -335,37 +191,19 @@
 }
 
 .dhivehi-prose code {
-  font-family: ui-monospace, monospace;
-  font-size: 0.9em;
   background: var(--dhivehi-surface);
-  padding: 0.1em 0.35em;
-  border-radius: 0.25rem;
 }
 
 .dhivehi-prose pre {
-  overflow-x: auto;
   background: var(--dhivehi-surface);
   border: 1px solid var(--dhivehi-border);
-  border-radius: 0.5rem;
-  padding: 1rem;
   direction: ltr;
   text-align: left;
-}
-
-.dhivehi-prose pre code {
-  background: none;
-  padding: 0;
 }
 
 .dhivehi-prose ul,
 .dhivehi-prose ol {
   padding-right: 1.25rem;
-}
-
-.dhivehi-article-author {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--dhivehi-border);
 }
 
 .dhivehi-article-author-inner {
@@ -376,16 +214,6 @@
   max-width: 22rem;
   margin: 0 auto;
   text-align: center;
-}
-
-.dhivehi-article-author-photo {
-  width: 56px;
-  height: 56px;
-  border-radius: 9999px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 1px solid var(--dhivehi-border);
-  background: var(--dhivehi-surface);
 }
 
 .dhivehi-article-author-content {
@@ -406,27 +234,12 @@
 }
 
 .dhivehi-article-author-bio {
-  margin-top: 0.375rem;
   max-width: 18rem;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--dhivehi-muted);
   direction: ltr;
   text-align: center;
 }
 
 .dhivehi-article-author-twitter {
-  display: inline-block;
   margin-top: 0.5rem;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 0.8125rem;
   color: var(--dhivehi-accent);
-  text-decoration: none;
-  direction: ltr;
-}
-
-.dhivehi-article-author-twitter:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }

@@ -1,5 +1,5 @@
 import { getPosts } from '@/lib/content'
-import { WritingPostList } from '@/components/writing/post-list'
+import { WritingPostList } from '@/components/blog/writing/post-list'
 
 export default function WritingIndexPage() {
   const posts = getPosts('writing')

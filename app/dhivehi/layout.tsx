@@ -1,8 +1,9 @@
 import { Inter } from 'next/font/google'
-import { DhivehiShell } from '@/components/dhivehi/dhivehi-shell'
+import { DhivehiShell } from '@/components/blog/dhivehi/shell'
 import { dhivehiMeta } from '@/meta/dhivehi'
+import '@/styles/blog-global.css'
+import '@/styles/blog-dhivehi.css'
 import '@/styles/dhivehi-fonts.css'
-import '@/styles/dhivehi.css'
 
 const inter = Inter({
   subsets: ['latin'],

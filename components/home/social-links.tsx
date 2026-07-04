@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 import { Github, Instagram, Mail } from 'lucide-react'
-import { siteContent } from '@/meta/site-content'
+import { siteContent } from '@/meta/site'
 
 function XIcon(props: SVGProps<SVGSVGElement>) {
   return (

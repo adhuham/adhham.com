@@ -1,7 +1,8 @@
 import { Inter, Source_Serif_4 } from 'next/font/google'
-import { WritingShell } from '@/components/writing/writing-shell'
+import { WritingShell } from '@/components/blog/writing/shell'
 import { writingMeta } from '@/meta/writing'
-import '@/styles/writing.css'
+import '@/styles/blog-global.css'
+import '@/styles/blog-writing.css'
 
 const inter = Inter({
   subsets: ['latin'],

@@ -1,4 +1,4 @@
-import { siteContent } from '@/meta/site-content'
+import { siteContent } from '@/meta/site'
 
 export function Projects() {
   const { projects } = siteContent

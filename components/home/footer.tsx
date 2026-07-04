@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { siteContent } from '@/meta/site-content'
+import { siteContent } from '@/meta/site'
 
 export function Footer() {
   return (

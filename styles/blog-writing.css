@@ -1,0 +1,176 @@
+.writing-theme {
+  --writing-bg: #f6f1e8;
+  --writing-surface: #fffdf8;
+  --writing-ink: #2a2218;
+  --writing-muted: #6b5f52;
+  --writing-accent: #7a3e2c;
+  --writing-border: #e8e3dd;
+  --writing-serif: var(--font-source-serif), 'Iowan Old Style', 'Palatino Linotype', serif;
+
+  color: var(--writing-ink);
+  background: linear-gradient(180deg, var(--writing-bg) 0%, #f0ebe2 100%);
+}
+
+.writing-blog-header-link:hover .writing-blog-name,
+.writing-blog-header-link:hover .writing-blog-tagline {
+  color: var(--writing-accent);
+}
+
+.writing-blog-name {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--writing-muted);
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.writing-blog-tagline {
+  font-family: var(--writing-serif);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: color-mix(in srgb, var(--writing-muted) 75%, transparent);
+  line-height: 1.5;
+  transition: color 0.15s ease;
+}
+
+.writing-empty {
+  color: var(--writing-muted);
+  line-height: 1.7;
+}
+
+.writing-post-link:hover .writing-post-title {
+  color: var(--writing-accent);
+}
+
+.writing-post-title {
+  font-family: var(--writing-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.writing-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.writing-tag {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--writing-accent);
+}
+
+.writing-article-title {
+  font-family: var(--writing-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.writing-article-byline-name {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--writing-ink);
+}
+
+.writing-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.8125rem;
+  color: var(--writing-muted);
+  text-decoration: none;
+}
+
+.writing-back:hover {
+  color: var(--writing-accent);
+}
+
+.writing-prose {
+  font-family: var(--writing-serif);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--writing-ink);
+}
+
+.writing-prose h2,
+.writing-prose h3 {
+  font-family: var(--writing-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.writing-prose h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.writing-prose h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.writing-prose a {
+  color: var(--writing-accent);
+}
+
+.writing-prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--writing-border);
+  color: var(--writing-muted);
+  font-style: italic;
+}
+
+.writing-prose code {
+  background: var(--writing-surface);
+}
+
+.writing-prose pre {
+  background: var(--writing-surface);
+  border: 1px solid var(--writing-border);
+}
+
+.writing-prose ul,
+.writing-prose ol {
+  padding-left: 1.25rem;
+}
+
+.writing-article-author-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.writing-article-author-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.writing-article-author-content {
+  min-width: 0;
+  padding-top: 0.125rem;
+}
+
+.writing-article-author-name {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--writing-ink);
+  margin-right: 0.5rem;
+}
+
+.writing-article-author-twitter {
+  color: var(--writing-accent);
+}

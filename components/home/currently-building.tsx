@@ -1,4 +1,4 @@
-import { siteContent } from '@/meta/site-content'
+import { siteContent } from '@/meta/site'
 
 export function CurrentlyBuilding() {
   const { building } = siteContent
