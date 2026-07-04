@@ -8,7 +8,6 @@
   --writing-serif: var(--font-source-serif), 'Iowan Old Style', 'Palatino Linotype', serif;
 
   color: var(--writing-ink);
-  background: linear-gradient(180deg, var(--writing-bg) 0%, #f0ebe2 100%);
 }
 
 .writing-blog-header-link:hover .writing-blog-name,

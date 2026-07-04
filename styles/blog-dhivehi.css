@@ -10,7 +10,6 @@
   --dhivehi-brand: 'Magey Huseynu', 'MV Aammu FK', sans-serif;
 
   color: var(--dhivehi-ink);
-  background: linear-gradient(180deg, var(--dhivehi-bg) 0%, #f0ebe2 100%);
 }
 
 .dhivehi-blog-header {
