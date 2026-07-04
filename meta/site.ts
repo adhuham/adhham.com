@@ -19,13 +19,21 @@ export const siteMetadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: [image],
+    images: [{
+      url: image,
+      width: 1200,
+      height: 630,
+    }],
   },
   twitter: {
     card: 'summary',
     title,
     description,
-    images: [image],
+    images: [{
+      url: image,
+      width: 1200,
+      height: 630,
+    }],
   },
   icons: {
     icon: [

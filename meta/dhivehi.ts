@@ -19,13 +19,21 @@ export const dhivehiMeta = {
     openGraph: {
       title: `${latinTitle} — ${description}`,
       description,
-      images: [image],
+      images: [{
+        url: image,
+        width: 1200,
+        height: 630,
+      }],
     },
     twitter: {
       card: 'summary',
       title: `${latinTitle} — ${description}`,
       description,
-      images: [image],
+      images: [{
+        url: image,
+        width: 1200,
+        height: 630,
+      }],
     },
     icons: {
       icon: [
