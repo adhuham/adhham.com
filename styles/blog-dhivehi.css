@@ -99,7 +99,7 @@
   font-family: var(--dhivehi-heading);
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.9;
   letter-spacing: -0.02em;
 }
 
@@ -154,7 +154,8 @@
 .dhivehi-prose {
   font-family: var(--dhivehi-content);
   font-size: 1.125rem;
-  line-height: 1.8;
+  letter-spacing: -0.04rem;
+  line-height: 2.6;
   color: var(--dhivehi-ink);
   direction: rtl;
 }
