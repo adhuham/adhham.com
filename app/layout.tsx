@@ -18,27 +18,25 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMeta.url),
-  title: 'Adhham / Personal homepage',
+  title: 'Adhham',
   description: 'Building software and exploring engineering through projects, experiments, and writing.',
-  /*
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/favicon.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/favicon.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon.png',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/favicon.png',
   },
-  */
 }
 
 export default function RootLayout({

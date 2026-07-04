@@ -24,5 +24,14 @@ export const dhivehiMeta = {
       title: `${latinTitle} — ${author}`,
       description: 'Reflections on thought, life, and perception, written in Dhivehi.',
     },
+    icons: {
+      icon: [
+        {
+          url: '/favicon-fikuraathu.png',
+          type: 'image/png',
+        },
+      ],
+      apple: '/favicon-fikuraathu.png',
+    },
   } satisfies Metadata,
 } as const

@@ -24,5 +24,14 @@ export const writingMeta = {
       title: `${header} — ${author}`,
       description: 'Essays on systems thinking, software, technology, and anything that sparks my curiosity.',
     },
+    icons: {
+      icon: [
+        {
+          url: '/favicon-cogito-dark.png',
+          type: 'image/png',
+        },
+      ],
+      apple: '/favicon-cogito-dark.png',
+    },
   } satisfies Metadata,
 } as const
