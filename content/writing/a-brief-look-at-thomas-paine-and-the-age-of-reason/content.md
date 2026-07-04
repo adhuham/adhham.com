@@ -1,0 +1,70 @@
+---
+title: A brief look at Thomas Paine & The Age of Reason
+slug: a-brief-look-at-thomas-paine-and-the-age-of-reason
+author: Adhham
+date: 2020-03-14
+featuredImage: cover.png
+tags:
+  - political-theory
+  - philosophy
+---
+
+# 
+
+A political theorist, propagandist, political activist, revolutionary and pamphleteer, Thomas Paine was an influential political figure of 18th century. Considered as one of the founding fathers of America, he played an active role in American independence and in French revolution, of which latter he was an ardent supporter.
+
+He authored many prominent and influential political pamphlets, including much famed _Common Sense_, a central text behind American independence. He wrote _The Rights of Man_, as a refutation to Edmund Burke’s _Reflections on the Revolution in France_. His political pamphlets, in which he advocated for republicanism, continues to be celebrated even today.
+
+During his late years, in 1792 (or 1793, exact date is debated) he began to work on a publication called *The Age of Reason* in which he published his thoughts upon religion. “It has been my intention, for several years past, to publish my thoughts upon religion.” writes Paine in the preface to the Part I; “I am well aware of the difficulties that attend the subject, and from that consideration, had reserved it to a more advanced period of life.” He says that the “circumstance that has now taken place in France of the total abolition of the whole national order of priesthood” has precipitated his intentions and “rendered a work of this kind exceedingly necessary”
+
+In _The Age of Reason_, Thomas Paine called for the abolishment of priesthood and advocated for secularism and liberalism. He attacked all institutionalized religions and described them as “human inventions set up to terrify and enslave mankind” and to “monopolize power and profit.” The pamphlet was and still continues to be popular among Free-thinkers. Paine himself is hailed as a Free-thinker; “My own mind is my own church.” says Paine.
+
+Thus, I would like to comment my thoughts in the paragraphs that follow, on this pamphlet.
+
+Although he gave reference to all major institutionalized religions, he never did go into detail any religion besides Christianity. His audience being primarily Christian, he might have not considered it important to talk about any other faith. Or perhaps, it’s likely that he is not familiar with other faiths. He writes that, since from the time he was capable of conceiving an idea he “either doubted the truth of the christian system, or thought it to be a strange affair.” The religions he refereed in his pamphlets are the three Abraham faiths: “Jewish”, “Christian” and “Turkish” which by of course he means Islam. Declaring his disbelief on any of these religions, he says “I do not believe in the creed professed by the Jewish church, by the Roman church, by the Greek church, by the Turkish church, by the Protestant church, nor by any church that I know of.”
+
+On revelation, after talking about what it means in the context of religion, he says “No one will deny or dispute the power of the Almighty to make such a communication if he pleases.” but the he goes onto object that if “something has been revealed to a certain person, and not revealed to any other person, it is revelation to that person only.” For the rest of the people, says Paine, it’s no more than hearsay. Therefore, he concludes they are not obliged to believe it.
+
+Through this line of argument, he limited revelation to the first encounter. He specifically says revelation “is necessarily limited to the first communication.” “It is a contradiction in terms and ideas” he says, “to call anything a revelation that comes to us at second hand.”
+
+The reason employed by Paine here can be used to reject any form of knowledge that comes from testimony. Most of our belief, including the belief in scientific knowledge, are testimonial. Most of us haven’t studied astronomy nor have gone out of the earth to get a first-hand experience of the roundness of it. So, does that mean people have the right to not believe in the roundness of the earth? After all, criticisms he employed against Christianity also includes the church’s rejection of such astronomical facts.
+
+Revelation according to him, is communication of something “to whom that thing is revealed, did not know before.” Hence, he claims that revelation “cannot be applied to anything done upon earth of which man is himself the actor or the witness” And concludes that “all the historical and anecdotal part of the Bible, which is almost the whole of it, is not within the meaning and compass of the word revelation”. So therefore it “is not word of God”
+
+His taking the word revelation, in its literal sense and applying it to the Bible, to conclude it as being not the word of God, seems to me rather a very strange claim. Just because something contain things that has been previously done and witnessed, it doesn’t necessarily follow that thing is not the word of God. But Paine makes the assumption though, that for something to be revelation, it must contain new and facts previously unheard and not witnessed of. He therefore took the word revelation, in its literal sense. Revelation can however refer to any communication that has been directed to mankind from God, and I presume that this is the definition taken by the majority of Christians.
+
+Throughout the pamphlet, he then goes onto criticize the pillars of Christian faith. In fact, he based the whole pamphlet on criticism targeting Christianity and Catholicism in particular. He talks about the character of Jesus, his birth,  and his crucifixion as believed by the Christians. He goes on to talk about the Bible, of contradictions and inconsistencies he believed it contains. He looked at Christianity with disdain, regarded its faith to be fabulous and superstitious. Its political institution as “corrupt”, its priest as “fraudsters”.
+
+When the church established their system “they collected all the writings they could find, and managed them as they pleased" says Paine. And questioned whether these writings were of original form. But the church decided he says, “by vote which of the books out of the collection they had made, should be the WORD OF GOD, and which should not.” In that they rejected several books as Apocrypha. “who the people were that did all this” questions Paine and adds “we know nothing of. They call themselves by the general name of the Church” Historically this has been the only authority and evidence for believing in these books, argues Paine, which he dismissed as “no evidence or authority at all.”
+
+With much ridicule he regarded the story of the Fall as being “derogatory to the Almighty” and “inconsistent with his wisdom” and “contradictory to his power” as well. He claims that the story would have been less absurd and less contradictory if it had been told as God compelling “Satan to exhibit himself on a cross in the shape of a snake, as a punishment for his new transgression” instead of God “coming down upon earth, and exhibiting himself upon a cross in the shape of a man.” On Trinity he says, “the mythological idea of a family of gods, and the christian system of arithmetic, that three are one, and one is three, are all irreconcilable, not only to the divine gift of reason, that God has given to man”
+
+On the criticism of the Bible in it self, he laid out in detail on Part II of the pamphlet. He question the authenticity of the authors of the books of the Bible, by quoting references from the book itself. He questioned how Moses could have written his own account of death in the book of Deuteronomy, while he is regarded as having authored the book himself. He also argued the phrases like “unto this day” and “until today”—which an acute reader of the Bible will never fail to realize—as suggesting that it has been written a long time after the Moses. The writer of the book (ie: Deuteronomy) tell us that “no man knoweth where the sepulchre of Moses is unto this day” writes Paine, “ meaning the time in which this writer lived.” To other books of the bible as well, he employed the same line of reasoning.
+
+Multitude of his criticism of Christian faith, doesn’t look like as being his own. He has probably heard it or read it from somewhere else. These are not unique objections in any sense. Learned Christian men have tried to devise a satisfactory answer to these difficult and challenging objections throughout ages. Some have equated how certain physical things can exist in three states to how God can be three and one at the same time, but still not completely escaping the criticism.
+
+Despite all his criticism against organized religions, Christianity in particular, he was not an atheist. In the preface to Part II, he professed his believe in a Creator. “I believe in one God, and no more” says Paine, professing his belief in strict monotheism. He further adds that he “hope for happiness beyond this life.”
+
+Promptly followed by this declaration, he writes: “I shall, in the progress of this work, declare the things I do not believe, and my reasons for not believing them. I do not believe in the creed professed by the Jewish church, by the Roman church, by the Greek church, by the Turkish church, by the Protestant church, nor by any church that I know.” And thus he rejected institutionalized religions.
+
+He was what we can call a Deist and accepted a strict monotheistic creator-God. Throughout the pamphlet he promoted the idea of deism, which he describes as being “pure” and “moral”
+
+He employed this deistic idea in his political writings, which calls for the separation of church and state. The connection between the church and state he described as “adulterous”. Soon after he published _Common Sense_ he says, that he “saw the exceeding probability that a revolution in the system of government would be followed by a revolution in the system of religion.”  And when that happens “Human inventions and priest-craft would be detected” and “man would return to the pure, unmixed, and unadulterated belief of one God, and no more.”
+
+He not only believed in the existence of God, but he gave a rational account of the existence of God. He says, “everything we behold carries in itself the internal evidence that it did not make itself. Every man is an evidence to himself, that he did not make himself; neither could his father make himself, nor his grandfather, nor any of his race; neither could any tree, plant, or animal make itself..” and concludes that it is the “conviction arising from this evidence, that carries us on, as it were, by necessity, to the belief of a first cause eternally existing, of a nature totally different to any material existence we know of, and by the power of which all things exist; and this first cause, man calls God.” He further adds that it is “only by the exercise of reason, that man can discover God.”
+
+It’s the creation that we hold that God speaks to universally to man, argues Paine. “Human language is local and changeable” so therefore according him is “incapable of being used as the means of unchangeable and universal information.” He seems to be making the assumption that if God were to speak to us, he would have not used human language that is “local” and “changeable”
+
+But I fail to notice how the principle ideas of religions cannot be expressed in a language accessible to everyone through the means of translation. What translation will fail, is to communicate every single word with its truest meaning. The basic ideas can, it seems me, be communicated.
+
+He proposes the creation, as that which by God reveals himself to mankind. Only in the Creation says Paine, “all our ideas and conceptions of a word of God can unite” It’s something that every man can read “an ever existing original”. “It cannot be forged; it cannot be counterfeited; it cannot be lost; it cannot be altered; it cannot be suppressed.” remarks Paine.
+
+Creation as the God’s revelation, seems also to me, as having similar problems which he associated with human language. Cannot the reflections upon the Creation differ based on rational abilities of the one reflecting? Is it not open to the same problem of different interpretations?
+
+Paine advocated for the use of reason and inquiry. He advocated for the scientific progression. He regarded what is contained in the Holy Scriptures as opposed to good moral ideas. He believed that the correct exercise of reason can determine what’s moral and good. But such an effort taken to find evidence for, and justify the basic ethical premises based on pure reason is certainly a task that’s not easy.  Ethical premises have their roots in religion itself.
+
+Works and the writings of Thomas Paine continues to influence the masses. It’s his use of language that’s easy-to-understand, remarks scholars, what mainly contributed to its success. Such ideas as expressed by Paine in this pamphlet, were already accessible to the educated class, but Paine made it accessible to the commoners.
+
+He has used a very provocative language throughout this pamphlet. It seems to me that, his tone is more like a person who is trying to ridicule rather than to reason. His use of language that is ‘vulgar’ admits to this fact. The multitude of criticism against Christianity and its Holy Book, which he has made, seems to me as not of his original making. He had heard them or read them from somewhere before. He seems to me, as a person who collected these in this pamphlet and expressed them with a ridiculing tone.
+
+In his pamphlet, he mentioned many other points besides these. But I have no intention to make this post—which is supposed to be brief—any longer than this. With this I conclude my brief thoughts upon _The Age of Reason_ by Thomas Paine.
